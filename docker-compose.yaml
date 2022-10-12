@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  react-ui:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: react--web-chat-app:latest
+    container_name: react--web-chat-app
+    volumes:
+      - ".:/app"
+    ports:
+      - "3001:3001"
+    stdin_open: true
+    tty: true
+    environment:
+      - WATCHPACK_POLLING=true
+   
+    

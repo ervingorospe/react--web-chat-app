@@ -4,7 +4,7 @@ module.exports = {
   mode: 'development',
   // Adding Server
   devServer: {
-    port: 3000,
+    port: 3001,
   },
   webpack: {
     alias: {

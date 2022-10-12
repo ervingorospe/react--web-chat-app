@@ -1,8 +1,9 @@
 FROM node:16.17-alpine
 
-WORKDIR /react--web-chat-app
-COPY package.json .
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+COPY . ./
+
 RUN yarn
-COPY . .
-EXPOSE 3000
+EXPOSE 3001
 CMD ["yarn", "start"]
